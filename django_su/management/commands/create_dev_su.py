@@ -4,10 +4,15 @@ from django.core.management import BaseCommand
 
 User = get_user_model()
 
-DJANGO_SU_USERNAME_FIELD = getattr(settings, "DJANGO_SU_USERNAME_FIELD", User.USERNAME_FIELD)
+DJANGO_SU_USERNAME_FIELD = getattr(
+    settings,
+    "DJANGO_SU_USERNAME_FIELD",
+    User.USERNAME_FIELD,
+)
 DJANGO_SU_USERNAME = getattr(settings, "DJANGO_SU_USERNAME", "admin")
 DJANGO_SU_PASSWORD = getattr(settings, "DJANGO_SU_PASSWORD", "admin")
 DJANGO_SU_EXTRA_ARGS = getattr(settings, "DJANGO_SU_EXTRA_ARGS", {})
+
 
 class Command(BaseCommand):
     help = "Create a SuperUser"
@@ -20,7 +25,9 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        filter_args = {f"{DJANGO_SU_USERNAME_FIELD}__iexact": DJANGO_SU_USERNAME.lower()}
+        filter_args = {
+            f"{DJANGO_SU_USERNAME_FIELD}__iexact": DJANGO_SU_USERNAME.lower(),
+        }
         exists = User.objects.filter(**filter_args).exists()
         if not exists:
             self.create_superuser()
