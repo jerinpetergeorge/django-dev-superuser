@@ -15,7 +15,7 @@ class Command(BaseCommand):
     def create_superuser(self):
         User.objects.create_superuser(
             DJANGO_SU_USERNAME,
-            DJANGO_SU_PASSWORD,
+            password=DJANGO_SU_PASSWORD,
             **DJANGO_SU_EXTRA_ARGS,
         )
 
@@ -28,6 +28,6 @@ class Command(BaseCommand):
                 self.style.SUCCESS(
                     f"SuperUser created with \n"
                     f"\t{DJANGO_SU_USERNAME_FIELD}: {DJANGO_SU_USERNAME}\n"
-                    f"\tPassword: {settings.DEV_PASSWORD}",
+                    f"\tPassword: {DJANGO_SU_PASSWORD}",
                 ),
             )
