@@ -11,3 +11,39 @@ skip_glob = "*migrations*,.github/*"
 skip_gitignore = "True"
 combine_as_imports = "True"
 line_length = 88
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-dev-superuser"
+version = "0.0.1"
+authors = [
+  { name="Jerin Peter George", email="jerinpetergeorge@gmail.com" },
+]
+description = "Management commands to creating super user with ease."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+        "Environment :: Web Environment",
+        "Environment :: Console",
+        "Framework :: Django :: 2.2",
+        "Framework :: Django :: 3.2",
+        "Framework :: Django :: 4.0",
+        "Intended Audience :: Developers",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Utilities",
+]
+dependencies = [
+        "Django>=2.2",
+        "django-extensions",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jerinpetergeorge/django-dev-superuser"
