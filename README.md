@@ -16,6 +16,10 @@
 
 ## Settings
 
-* `DJANGO_SU_USERNAME` (type: `str`) - username for the superuser (default: `admin`)
-* `DJANGO_SU_PASSWORD` (type: `str`) - password for the superuser (default: `password`)
-* `DJANGO_SU_EXTRA_ARGS` (type: `dict`) - extra arguments for the superuser (default: `{}`)
+```
+DJANGO_SU_CONFIG = {
+    "USERNAME": "admin",
+    "PASSWORD": "admin",
+    "EXTRA_ARGS": {},
+}
+```
