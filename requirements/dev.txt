@@ -3,3 +3,6 @@ flake8
 flake8-print
 isort
 pre-commit
+pytest
+pytest-cov
+pytest-django

@@ -47,3 +47,11 @@ dependencies = [
 
 [project.urls]
 "Homepage" = "https://github.com/jerinpetergeorge/django-dev-superuser"
+
+[tool.pytest.ini_options]
+addopts = """\
+    --strict-config
+    --strict-markers
+    --ds=tests.settings
+    """
+django_find_project = false
