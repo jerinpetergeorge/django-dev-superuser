@@ -24,7 +24,6 @@ authors = [
 ]
 description = "Management commands to creating super user with ease."
 readme = "README.md"
-requires-python = ">=3.7"
 classifiers = [
         "Environment :: Web Environment",
         "Environment :: Console",
