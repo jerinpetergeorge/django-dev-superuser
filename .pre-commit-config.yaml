@@ -5,7 +5,7 @@ exclude: |
   )
 repos:
   -   repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v4.4.0
+      rev: v6.0.0
       hooks:
       -   id: trailing-whitespace
       -   id: end-of-file-fixer
@@ -30,16 +30,15 @@ repos:
 #          args: [--config=.flake8]
 #          additional_dependencies: [flake8-typing-imports, flake8-bugbear, flake8-print]
 
-  -   repo: https://github.com/pre-commit/mirrors-autopep8
-      rev: v2.0.1
+  -   repo: https://github.com/hhatto/autopep8
+      rev: v2.3.2
       hooks:
       -   id: autopep8
 
   -   repo: https://github.com/asottile/add-trailing-comma
-      rev: v2.4.0
+      rev: v4.0.0
       hooks:
       -   id: add-trailing-comma
-          args: [--py36-plus]
 
   -   repo: meta
       hooks:
@@ -47,17 +46,17 @@ repos:
       -   id: check-useless-excludes
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.1
+    rev: v3.21.2
     hooks:
       - id: pyupgrade
         args: [--py36-plus]
 
   - repo: https://github.com/pycqa/isort
-    rev: 5.12.0
+    rev: 9.0.0a3
     hooks:
       - id: isort
 
   - repo: https://github.com/psf/black
-    rev: 23.1.0
+    rev: 26.5.1
     hooks:
       - id: black

@@ -46,15 +46,24 @@ dependencies = [
 
 [project.optional-dependencies]
 
-dev = ["bump2version~=1.0.1"]
+dev = [
+    "bump2version~=1.0.1",
+    "flake8",
+    "flake8-print",
+    "pre-commit",
+    "pytest",
+    "pytest-django",
+    "pytest-cov",
+]
 
 [project.urls]
 "Homepage" = "https://github.com/jerinpetergeorge/django-dev-superuser"
 
 [tool.pytest.ini_options]
+pythonpath = ["."]
+django_find_project = false
 addopts = """\
     --strict-config
     --strict-markers
     --ds=tests.settings
     """
-django_find_project = false
