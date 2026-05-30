@@ -1,5 +1,8 @@
 # django-dev-superuser
 
+[![CI](https://github.com/jerinpetergeorge/django-dev-superuser/actions/workflows/ci.yml/badge.svg)](https://github.com/jerinpetergeorge/django-dev-superuser/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/jerinpetergeorge/django-dev-superuser/branch/main/graph/badge.svg)](https://codecov.io/gh/jerinpetergeorge/django-dev-superuser)
+
 Management commands for creating a Django superuser with ease — designed for local/dev environments.
 
 ## Installation
@@ -90,7 +93,7 @@ pip install tox
 tox
 ```
 
-This runs tests across all supported Python (3.8–3.10) and Django (2.2–4.2) combinations.
+This runs tests across all supported Python (3.8–3.14) and Django (4.2–6.0) combinations.
 
 ### Code style
 
